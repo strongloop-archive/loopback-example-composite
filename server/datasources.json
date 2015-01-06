@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "accountDs": {
+    "name": "accountDs",
+    "connector": "mongodb",
+    "host": "demo.strongloop.com",
+    "port": 27017,
+    "database": "demo",
+    "username": "demo",
+    "password": "L00pBack"
+  }
+}
