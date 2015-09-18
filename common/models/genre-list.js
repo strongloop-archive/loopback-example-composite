@@ -1,6 +1,8 @@
 module.exports = function(GenreList) {
   GenreList.getGenreList = function(userId) {
-    return this.find({where: {userId: userId}});
+    return this.find({where: {userId: userId}}).then(function(lists) {
+      return lists;
+    });
   };
 
   GenreList.addTitleToGenreList = function(userId, genreIndex, titleId) {

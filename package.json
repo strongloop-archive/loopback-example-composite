@@ -12,6 +12,8 @@
     "errorhandler": "^1.4.2",
     "falcor": "^0.1.12",
     "falcor-express": "^0.1.2",
+    "falcor-json-graph": "^1.1.5",
+    "falcor-router": "^0.2.9",
     "loopback": "^2.22.0",
     "loopback-boot": "^2.12.2",
     "loopback-datasource-juggler": "^2.40.1",
