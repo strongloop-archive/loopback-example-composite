@@ -8,7 +8,15 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "acls": [
+      {
+        "principalType": "ROLE",
+        "principalId": "$everyone",
+        "property": "find",
+        "permission": "ALLOW"
+      }
+    ]
   },
   "AccessToken": {
     "dataSource": "db",
@@ -26,8 +34,16 @@
     "dataSource": "db",
     "public": false
   },
-  "Account": {
-    "dataSource": "accountDs",
+  "title": {
+    "dataSource": "db",
+    "public": true
+  },
+  "rating": {
+    "dataSource": "db",
+    "public": true
+  },
+  "genreList": {
+    "dataSource": "db",
     "public": true
   }
 }

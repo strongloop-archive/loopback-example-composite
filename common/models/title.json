@@ -1,0 +1,34 @@
+{
+  "name": "title",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "number",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "boxshot": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "rating": {
+      "type": "hasOne",
+      "model": "rating",
+      "foreignKey": "titleId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
