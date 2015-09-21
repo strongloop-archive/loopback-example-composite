@@ -8,12 +8,16 @@
   "session": {},
   "auth": {},
   "parse": {},
-  "routes": {
-    "loopback#status": {
-      "paths": "/"
-    }
+  "files": {
+    "loopback#static": [
+      {
+        "paths": [
+          "/"
+        ],
+        "params": "$!../client"
+      }
+    ]
   },
-  "files": {},
   "final": {
     "loopback#urlNotFound": {}
   },
