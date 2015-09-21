@@ -22,13 +22,19 @@
 
         // model.get('genrelist[0].name').then(jlog, jerror)
 
-        model.get('titlesById[1]["name", "year", "description"]').then(function(data) {
-          var title = data.json.titlesById['1'];
-          document.getElementById('msg').innerHTML = "<p>" +
-            title.name + "<br>" +
-            title.year + "<br>" +
-            title.description +
-            "</p>";
+        model.get('titlesById[1,2]["name", "year", "description"]').then(function(data) {
+          var list = '<ul>';
+          for (var id in data.json.titlesById) {
+            var title = data.json.titlesById[id];
+            if (title && title.name) {
+              list += "<li>" +
+                title.name + ", " +
+                title.year + ", " +
+                title.description + '\n';
+            }
+          }
+          list += '</ul>';
+          document.getElementById('msg').innerHTML = list;
         });
 
         // model.setValue('titlesById[9].userRating', 9).then(jlog, jerror)
